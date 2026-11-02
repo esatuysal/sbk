@@ -1,0 +1,20 @@
+html,body{background:#000}
+body{color:#fff;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#e11d2e;color:#fff}
+.display{font-weight:900;letter-spacing:-.045em;line-height:.88}
+.bd{border-color:#18181b}
+.shot{filter:contrast(1.25) saturate(.6) brightness(.8);background:#09090b}
+.btn{border:1px solid #fff;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:#fff;color:#000}
+.btn-red{background:#e11d2e;border-color:#e11d2e}
+.btn-red:hover{background:#fff;border-color:#fff;color:#000}
+:focus-visible{outline:2px solid #e11d2e;outline-offset:3px}
+.belt{display:flex;width:max-content;animation:belt 48s linear infinite}
+@keyframes belt{to{transform:translateX(-50%)}}
+.belt img{height:34vh;width:auto;aspect-ratio:4/5;object-fit:cover;margin-right:1px}
+.sil{filter:drop-shadow(0 0 40px rgba(225,29,46,.25));transition:filter .6s}
+.on .sil{filter:drop-shadow(0 0 60px rgba(225,29,46,.6))}
+.secret{max-height:0;opacity:0;overflow:hidden;transition:max-height .9s ease,opacity .9s ease}
+.on .secret{max-height:900px;opacity:1}
+.nl{transition:color .2s}.nl:hover,.nl[aria-current]{color:#e11d2e}
+@media (prefers-reduced-motion:reduce){.belt{animation:none}html{scroll-behavior:auto}}

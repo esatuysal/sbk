@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ben kimim? — SBK</title>
+<meta name="description" content="Cerrahpaşa'da sağlıklı beslenen insanların kulübü. Bu kulüp sensin.">
+<meta name="theme-color" content="#000000">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="kimim">
+<main>
+<section class="px-5 md:px-10 pt-36 pb-24 md:pb-40">
+  <div id="who" class="grid md:grid-cols-12 gap-10 items-center">
+    <div class="md:col-span-5">
+      <svg class="sil w-full max-w-sm mx-auto" viewBox="0 0 200 240" role="img" aria-label="Silüet">
+        <circle cx="100" cy="78" r="46" fill="#050505" stroke="#18181b" stroke-width="2"/>
+        <path d="M14 240c0-62 36-96 86-96s86 34 86 96z" fill="#050505" stroke="#18181b" stroke-width="2"/>
+        <circle cx="100" cy="78" r="46" fill="none" stroke="#e11d2e" stroke-width="1" stroke-dasharray="2 9" opacity=".8"/>
+      </svg>
+    </div>
+    <div class="md:col-span-7">
+      <h1 class="display text-[16vw] md:text-[8vw] uppercase">Ben kimim?</h1>
+      <button id="whoBtn" aria-expanded="false" aria-controls="secret" class="btn mt-8 px-7 py-4 text-sm font-bold">Silüeti kaldır</button>
+      <div id="secret" class="secret">
+        <div class="pt-10 space-y-6 max-w-xl">
+          <p class="text-2xl md:text-4xl font-black tracking-tight leading-tight">Önemi yok. Ben sen, o. Bu kulüp sensin.</p>
+          <p class="text-zinc-400 leading-relaxed">Ben PT, diyetisyen ya da doktor değilim (belki). İsmimin bu kulüpte önemi yok. Bugün SBK bir isim, ama fikir her zaman kalacak; tıpkı mezun olduktan sonra da seninle kalacağı gibi.</p>
+          <div class="grid grid-cols-2 border-t bd pt-6 gap-6 text-sm">
+            <div><p class="font-bold mb-2">Yaptığımız</p><p class="text-zinc-400 leading-relaxed">Site, sosyal medya, öğrenci işleri, organizasyon ve sponsorluk: hepsi tek kişide. Buluşturmak, hatırlatmak, çekiliş yapmak.</p></div>
+            <div><p class="font-bold mb-2">Yapmadığımız</p><p class="text-zinc-400 leading-relaxed">Diyet listesi satmak, reçete yazmak, tıbbi tavsiye vermek. Fikir paylaşıyoruz, tedavi değil.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
