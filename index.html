@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doymak İçin Değil, Yaşamak İçin — Bağımsız Sağlıklı Beslenme Hareketi</title>
+<meta name="description" content="Sistem seni esir almasın. Bağımsız Sağlıklı Beslenme Hareketi.">
+<meta name="theme-color" content="#000000">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink: '#000', line: '#18181b', blood: '#e11d2e' },
+  fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'] }
+}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
+<style>
+  html { background:#000; }
+  body { background:#000; color:#fff; font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  ::selection { background:#e11d2e; color:#fff; }
+  .display { font-weight:900; letter-spacing:-0.045em; line-height:.86; }
+  .shot { filter:contrast(1.25) saturate(.6) brightness(.82); background:#09090b; }
+  .shot-wrap { overflow:hidden; background:#09090b; }
+  .btn { border:1px solid #fff; transition:background .2s,color .2s,border-color .2s; }
+  .btn:hover { background:#fff; color:#000; }
+  .btn-red { background:#e11d2e; border-color:#e11d2e; color:#fff; }
+  .btn-red:hover { background:#fff; border-color:#fff; color:#000; }
+  :focus-visible { outline:2px solid #e11d2e; outline-offset:3px; }
+  .grain::after { content:""; position:fixed; inset:0; pointer-events:none; opacity:.05; z-index:50;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body class="grain antialiased">
+
+<header class="fixed top-0 inset-x-0 z-40 flex items-center justify-between px-5 md:px-10 py-5 mix-blend-difference">
+  <a href="#top" class="font-black tracking-tighter text-lg">YAŞAMAK<span class="text-blood">.</span></a>
+  <nav class="flex gap-6 text-sm font-medium tracking-wide">
+    <a href="#manifesto" class="hover:text-blood transition-colors">Manifesto</a>
+    <a href="#katil" class="hover:text-blood transition-colors">Bize Katıl</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="min-h-[100svh] flex flex-col justify-end px-5 md:px-10 pb-10 md:pb-16 pt-32 border-b border-line">
+  <h1 class="display text-[17vw] md:text-[11.5vw] uppercase" aria-label="Doymak için değil, yaşamak için.">
+    <span class="block overflow-hidden"><span class="hero-line block">Doymak</span></span>
+    <span class="block overflow-hidden"><span class="hero-line block">için değil,</span></span>
+    <span class="block overflow-hidden"><span class="hero-line block text-blood">yaşamak</span></span>
+    <span class="block overflow-hidden"><span class="hero-line block">için.</span></span>
+  </h1>
+  <div class="mt-12 md:mt-16 grid md:grid-cols-12 gap-8 items-end hero-sub">
+    <p class="md:col-span-6 text-lg md:text-2xl font-medium leading-tight tracking-tight text-zinc-300 max-w-xl">
+      Sistem seni esir almasın.<br>Bağımsız Sağlıklı Beslenme Hareketi.
+    </p>
+    <div class="md:col-span-6 md:justify-self-end flex gap-3">
+      <a href="#katil" class="btn btn-red px-7 py-4 text-sm font-bold tracking-wide">Bize Katıl</a>
+      <a href="#manifesto" class="btn px-7 py-4 text-sm font-bold tracking-wide">Manifesto</a>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" class="px-5 md:px-10 py-24 md:py-40 border-b border-line">
+  <p class="reveal display text-[11vw] md:text-[7vw] uppercase max-w-6xl">
+    Fabrikanın tabağına<br>değil, toprağın<br>sofrasına dön.
+  </p>
+
+  <div class="mt-24 md:mt-40 grid md:grid-cols-3 border-t border-line">
+    <article class="reveal py-10 md:pr-10 md:border-r border-line">
+      <h2 class="display text-5xl md:text-6xl uppercase">İşlenmiş<br>gıdaya<br>hayır.</h2>
+      <p class="mt-8 text-zinc-400 leading-relaxed max-w-sm">Okuyamadığın bir içerik listesi, yemek değildir. Raf ömrü için tasarlanan şey, beden ömrü için tasarlanmadı.</p>
+    </article>
+    <article class="reveal py-10 md:px-10 md:border-r border-t md:border-t-0 border-line">
+      <h2 class="display text-5xl md:text-6xl uppercase">Endüstriyel<br>şekere<br>hayır.</h2>
+      <p class="mt-8 text-zinc-400 leading-relaxed max-w-sm">Tatlı olan her şey besin değildir. Rafine şeker enerji vermez, sadece bir sonraki krizi erteler.</p>
+    </article>
+    <article class="reveal py-10 md:pl-10 border-t md:border-t-0 border-line">
+      <h2 class="display text-5xl md:text-6xl uppercase">Ucuz<br>dopamine<br>hayır.</h2>
+      <p class="mt-8 text-zinc-400 leading-relaxed max-w-sm">Ambalajın rengi seni satın almak için seçildi. Açlığın değil, alışkanlığın yönetiliyor. Bunu kırmak ilk özgürlüktür.</p>
+    </article>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section aria-label="Galeri" class="border-b border-line overflow-hidden">
+
+  <div class="gal relative h-[100svh] md:h-[120vh]">
+    <div class="shot-wrap absolute inset-0"><img class="shot gal-img w-full h-[115%] object-cover" loading="lazy" alt="Süzülen saf bal" src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=2000&q=80"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/40"></div>
+    <h2 class="gal-text display absolute left-5 md:left-10 bottom-10 md:bottom-16 text-[16vw] md:text-[10vw] uppercase">Gerçek<br>Yakıt.</h2>
+  </div>
+
+  <div class="gal relative h-[100svh] md:h-[120vh] border-t border-line">
+    <div class="shot-wrap absolute inset-0"><img class="shot gal-img w-full h-[115%] object-cover" loading="lazy" alt="Çiğ organik biftek" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=2000&q=80"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-black/40"></div>
+    <h2 class="gal-text display absolute right-5 md:right-10 bottom-10 md:bottom-16 text-right text-[16vw] md:text-[10vw] uppercase">Sıfır<br>İşlenmiş<br><span class="text-blood">Gıda.</span></h2>
+  </div>
+
+  <div class="grid md:grid-cols-3 border-t border-line">
+    <figure class="shot-wrap relative h-[70svh] md:h-[90vh]">
+      <img class="shot gal-img w-full h-[115%] object-cover" loading="lazy" alt="Taze avokado" src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=1200&q=80">
+    </figure>
+    <figure class="shot-wrap relative h-[70svh] md:h-[90vh] border-t md:border-t-0 md:border-x border-line">
+      <img class="shot gal-img w-full h-[115%] object-cover" loading="lazy" alt="Canlı renkli çilekler" src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=1200&q=80">
+    </figure>
+    <figure class="shot-wrap relative h-[70svh] md:h-[90vh] border-t md:border-t-0 border-line">
+      <img class="shot gal-img w-full h-[115%] object-cover" loading="lazy" alt="Berrak su damlası" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1200&q=80">
+    </figure>
+  </div>
+
+  <div class="px-5 md:px-10 py-24 md:py-40 border-t border-line">
+    <h2 class="reveal display text-[16vw] md:text-[10vw] uppercase">Zihinsel<br>Netlik<span class="text-blood">.</span></h2>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="katil" class="px-5 md:px-10 py-24 md:py-44">
+  <h2 class="reveal display text-[13vw] md:text-[8vw] uppercase max-w-5xl">Masadan kalk.<br>Sistemi geride bırak.</h2>
+  <form id="join" class="reveal mt-16 md:mt-20 max-w-3xl" novalidate>
+    <label for="email" class="block text-sm text-zinc-400 mb-3">E-posta adresin</label>
+    <div class="flex flex-col md:flex-row border border-line focus-within:border-white transition-colors">
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="ad@posta.com"
+        class="flex-1 bg-black px-5 py-5 text-lg md:text-xl placeholder-zinc-700 outline-none min-w-0">
+      <button type="submit" class="btn btn-red px-8 py-5 text-base font-black tracking-wide uppercase">Sistemden Çık</button>
+    </div>
+    <p id="msg" class="mt-4 text-sm min-h-[1.25rem] text-zinc-400" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<footer class="px-5 md:px-10 py-8 border-t border-line flex flex-col md:flex-row gap-2 justify-between text-sm text-zinc-500">
+  <span>Bağımsız Sağlıklı Beslenme Hareketi</span>
+  <span>Doymak için değil, yaşamak için.</span>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (!reduce) {
+    // Page-load moment: headline lines rise out of their masks
+    gsap.set('.hero-line', { yPercent: 110 });
+    gsap.set('.hero-sub', { opacity: 0, y: 24 });
+    gsap.timeline({ defaults: { ease: 'power4.out' } })
+      .to('.hero-line', { yPercent: 0, duration: 1.2, stagger: 0.12 })
+      .to('.hero-sub', { opacity: 1, y: 0, duration: 0.9 }, '-=0.6');
+
+    // Manifesto + form entrances
+    gsap.utils.toArray('.reveal').forEach(function (el) {
+      gsap.from(el, { opacity: 0, y: 60, duration: 1.1, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' } });
+    });
+
+    // Gallery: parallax on every image, clip-path reveal + floating text on big frames
+    gsap.utils.toArray('.gal-img').forEach(function (img) {
+      gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: 'none',
+        scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+    });
+    gsap.utils.toArray('.gal').forEach(function (g) {
+      gsap.from(g.querySelector('.shot-wrap'), { clipPath: 'inset(18% 12% 18% 12%)', duration: 1.4, ease: 'power4.out',
+        scrollTrigger: { trigger: g, start: 'top 75%' } });
+      gsap.fromTo(g.querySelector('.gal-text'), { y: 140, opacity: 0 }, { y: -60, opacity: 1, ease: 'none',
+        scrollTrigger: { trigger: g, start: 'top 40%', end: 'bottom 90%', scrub: 0.6 } });
+    });
+  }
+
+  // Form (client-side only; wire to your endpoint, see comment)
+  var form = document.getElementById('join'), msg = document.getElementById('msg'), email = document.getElementById('email');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+      msg.style.color = '#e11d2e';
+      msg.textContent = 'Geçerli bir e-posta adresi gir.';
+      email.focus();
+      return;
+    }
+    // TODO: send to your backend, e.g. fetch('https://formspree.io/f/XXXX', { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
+    msg.style.color = '#fff';
+    msg.textContent = 'Kaydın alındı. Hareketin içindesin.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
